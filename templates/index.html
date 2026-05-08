@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >Início | SENAI</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height: 100vh;
+      background: linear-gradient(135deg, #111, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container{
+      width: 900px;
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(255,0,0,0.25);
+      border-top: 8px solid #cc0000;
+    }
+
+    /* TOPO */
+
+    .topo{
+      background: #cc0000;
+      color: white;
+      padding: 25px 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo{
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .menu{
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu a:hover{
+      color: black;
+    }
+
+    /* CONTEÚDO */
+
+    .conteudo{
+      padding: 70px 50px;
+      text-align: center;
+    }
+
+    .conteudo h1{
+      font-size: 55px;
+      color: #cc0000;
+      margin-bottom: 20px;
+    }
+
+    .conteudo h2{
+      font-size: 30px;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    .conteudo p{
+      color: #555;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    /* BOTÕES */
+
+    .botoes{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn{
+      padding: 16px 35px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-login{
+      background: #111;
+      color: white;
+    }
+
+    .btn-login:hover{
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    .btn-cadastro{
+      background: #cc0000;
+      color: white;
+    }
+
+    .btn-cadastro:hover{
+      background: #990000;
+      transform: scale(1.05);
+    }
+
+    /* RODAPÉ */
+
+    footer{
+      background: #000;
+      color: #999;
+      text-align: center;
+      padding: 18px;
+      border-top: 2px solid #cc0000;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TOPO -->
+
+    <div class="topo">
+
+      <div class="logo">
+        SENAI
+      </div>
+
+      <div class="menu">
+        <a href="/">Início</a>
+        <a href="/login">Login</a>
+        <a href="/cadastro">Cadastro</a>
+      </div>
+
+    </div>
+
+    <!-- CONTEÚDO -->
+
+    <div class="conteudo">
+
+      <h1>SENAI</h1>
+
+      <h2>Bem-vindo ao Sistema</h2>
+
+      <p>
+        Plataforma desenvolvida para gerenciamento de usuários,
+        acesso ao sistema e criação de contas.
+        Faça login para continuar ou crie uma nova conta
+        para começar agora mesmo.
+      </p>
+
+      <div class="botoes">
+
+        <a href="/login" class="btn btn-login">
+          Entrar
+        </a>
+
+        <a href="/cadastro" class="btn btn-cadastro">
+          Criar Conta
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+      © 2026 SENAI - Todos os direitos reservados
+    </footer>
+
+  </div>
+
+</body>
+</html>

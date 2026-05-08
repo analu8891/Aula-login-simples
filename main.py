@@ -29,3 +29,11 @@ def tela_login(request: Request):
         "login.html",
         {"request":request}
     )
+
+@app.get("/")
+def tela_inicial(request: Request):
+    return templates.TemplateResponse(
+        request,
+        "index.html",
+        {"request":request}
+    )
