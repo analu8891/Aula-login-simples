@@ -150,7 +150,20 @@
     <form action="/cadastro" method="post">
 
       <div class="campo">
+        <label for="nome">Nome</label>
+
+        <input 
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome"
+          required
+        >
+      </div>
+
+      <div class="campo">
         <label for="email">Email</label>
+
         <input 
           type="email" 
           id="email"
@@ -162,6 +175,7 @@
 
       <div class="campo">
         <label for="senha">Senha</label>
+
         <input 
           type="password" 
           id="senha"
@@ -174,6 +188,12 @@
           Use letras, números e símbolos para uma senha mais segura.
         </div>
       </div>
+
+      {% if erro %}
+          <p style="color: red;">{{ erro }}</p>
+      {% endif %}
+
+      <br>
 
       <div class="botao">
         <button type="submit">CRIAR CONTA</button>

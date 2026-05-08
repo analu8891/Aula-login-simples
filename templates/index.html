@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title >Início | SENAI</title>
+  <title>Início | SENAI</title>
 
   <style>
 
@@ -15,86 +15,91 @@
     }
 
     body{
-      min-height: 100vh;
       background: linear-gradient(135deg, #111, #000);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .container{
-      width: 900px;
-      background: white;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 0 30px rgba(255,0,0,0.25);
-      border-top: 8px solid #cc0000;
-    }
-
-    /* TOPO */
-
-    .topo{
-      background: #cc0000;
       color: white;
-      padding: 25px 40px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+
+    header{
+      width: 100%;
+      padding: 20px 50px;
+      background: #cc0000;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
     .logo{
-      font-size: 34px;
+      font-size: 32px;
       font-weight: bold;
       letter-spacing: 2px;
     }
 
-    .menu{
+    nav{
       display: flex;
       gap: 20px;
     }
 
-    .menu a{
+    nav a{
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
     }
 
-    .menu a:hover{
+    nav a:hover{
       color: black;
     }
 
-    /* CONTEÚDO */
+    /* CONTEÚDO PRINCIPAL */
 
-    .conteudo{
-      padding: 70px 50px;
+    .principal{
+      flex: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 40px;
+    }
+
+    .card{
+      background: white;
+      width: 850px;
+      padding: 50px;
+      border-radius: 20px;
+      border-top: 8px solid #cc0000;
+
+      box-shadow: 0 0 25px rgba(255,0,0,0.2);
+
       text-align: center;
     }
 
-    .conteudo h1{
-      font-size: 55px;
+    .card h1{
       color: #cc0000;
+      font-size: 50px;
       margin-bottom: 20px;
     }
 
-    .conteudo h2{
-      font-size: 30px;
+    .card h2{
       color: #111;
+      font-size: 28px;
       margin-bottom: 20px;
     }
 
-    .conteudo p{
+    .card p{
       color: #555;
       font-size: 18px;
-      line-height: 1.7;
-      max-width: 700px;
-      margin: auto;
-      margin-bottom: 40px;
+      line-height: 1.6;
+      margin-bottom: 35px;
     }
-
-    /* BOTÕES */
 
     .botoes{
       display: flex;
@@ -104,10 +109,9 @@
     }
 
     .btn{
-      padding: 16px 35px;
-      border-radius: 12px;
+      padding: 15px 30px;
+      border-radius: 10px;
       text-decoration: none;
-      font-size: 16px;
       font-weight: bold;
       transition: 0.3s;
     }
@@ -132,14 +136,14 @@
       transform: scale(1.05);
     }
 
-    /* RODAPÉ */
+    /* FOOTER */
 
     footer{
       background: #000;
-      color: #999;
       text-align: center;
       padding: 18px;
       border-top: 2px solid #cc0000;
+      color: #999;
       font-size: 14px;
     }
 
@@ -148,43 +152,43 @@
 
 <body>
 
-  <div class="container">
+  <!-- MENU -->
 
-    <!-- TOPO -->
+  <header>
 
-    <div class="topo">
-
-      <div class="logo">
-        SENAI
-      </div>
-
-      <div class="menu">
-        <a href="/">Início</a>
-        <a href="/login">Login</a>
-        <a href="/cadastro">Cadastro</a>
-      </div>
-
+    <div class="logo">
+      SENAI
     </div>
 
-    <!-- CONTEÚDO -->
+    <nav>
+      <a href="/">Início</a>
+      <a href="/login">Login</a>
+      <a href="/cadastro">Cadastro</a>
+    </nav>
 
-    <div class="conteudo">
+  </header>
+
+  <!-- CONTEÚDO -->
+
+  <section class="principal">
+
+    <div class="card">
 
       <h1>SENAI</h1>
 
       <h2>Bem-vindo ao Sistema</h2>
 
       <p>
-        Plataforma desenvolvida para gerenciamento de usuários,
-        acesso ao sistema e criação de contas.
-        Faça login para continuar ou crie uma nova conta
-        para começar agora mesmo.
+        Plataforma desenvolvida para acesso de usuários,
+        realização de cadastro e autenticação no sistema.
+        Utilize os botões abaixo para entrar na sua conta
+        ou criar um novo cadastro.
       </p>
 
       <div class="botoes">
 
         <a href="/login" class="btn btn-login">
-          Entrar
+          Fazer Login
         </a>
 
         <a href="/cadastro" class="btn btn-cadastro">
@@ -195,13 +199,13 @@
 
     </div>
 
-    <!-- RODAPÉ -->
+  </section>
 
-    <footer>
-      © 2026 SENAI - Todos os direitos reservados
-    </footer>
+  <!-- RODAPÉ -->
 
-  </div>
+  <footer>
+    © 2026 SENAI - Todos os direitos reservados
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height: 100vh;
+
+      background: linear-gradient(135deg, #0f0f0f, #000);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
+    }
+
+    .container{
+      width: 750px;
+
+      background: white;
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      box-shadow: 0 0 35px rgba(255,0,0,0.35);
+
+      border-top: 8px solid #cc0000;
+    }
+
+    /* TOPO */
+
+    .topo{
+      background: #cc0000;
+
+      padding: 35px;
+
+      text-align: center;
+
+      color: white;
+    }
+
+    .topo h1{
+      font-size: 42px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .topo p{
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* CONTEÚDO */
+
+    .conteudo{
+      padding: 45px;
+      text-align: center;
+    }
+
+    .icone{
+      width: 110px;
+      height: 110px;
+
+      margin: auto;
+      margin-bottom: 25px;
+
+      border-radius: 50%;
+
+      background: linear-gradient(135deg, #cc0000, #770000);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      font-size: 45px;
+
+      box-shadow: 0 0 20px rgba(204,0,0,0.4);
+    }
+
+    .conteudo h2{
+      font-size: 32px;
+      color: #111;
+
+      margin-bottom: 15px;
+    }
+
+    .conteudo p{
+      color: #555;
+
+      font-size: 17px;
+
+      line-height: 1.6;
+
+      margin-bottom: 35px;
+    }
+
+    .usuario{
+      color: #cc0000;
+      font-weight: bold;
+    }
+
+    /* CARDS */
+
+    .cards{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      margin-bottom: 40px;
+
+      flex-wrap: wrap;
+    }
+
+    .card{
+      width: 180px;
+
+      background: #f7f7f7;
+
+      padding: 25px;
+
+      border-radius: 15px;
+
+      border-left: 5px solid #cc0000;
+
+      transition: 0.3s;
+    }
+
+    .card:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .card h3{
+      color: #cc0000;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p{
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* BOTÃO */
+
+    .logout{
+      display: inline-block;
+
+      text-decoration: none;
+
+      background: #111;
+      color: white;
+
+      padding: 15px 40px;
+
+      border-radius: 12px;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .logout:hover{
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    /* RODAPÉ */
+
+    .rodape{
+      background: #111;
+
+      color: #aaa;
+
+      text-align: center;
+
+      padding: 18px;
+
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TOPO -->
+
+    <div class="topo">
+
+      <h1>SENAI</h1>
+
+      <p>Sistema Administrativo</p>
+
+    </div>
+
+    <!-- CONTEÚDO -->
+
+    <div class="conteudo">
+
+      <div class="icone">
+        👤
+      </div>
+
+      <h2>
+        Bem-vindo,
+        <span class="usuario">{{ usuario.nome }}</span>
+      </h2>
+
+      <p>
+        Você acessou o painel administrativo do sistema.
+        Aqui você pode visualizar informações,
+        gerenciar usuários e acessar funcionalidades do projeto.
+      </p>
+
+      <!-- CARDS -->
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Usuários</h3>
+
+          <p>
+            Gerencie usuários cadastrados no sistema.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Segurança</h3>
+
+          <p>
+            Controle acessos e sessões do sistema.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Painel</h3>
+
+          <p>
+            Visualize informações administrativas.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- BOTÃO -->
+
+      <a href="/logout" class="logout">
+        Sair do Sistema
+      </a>
+
+    </div>
+
+    <!-- RODAPÉ -->
+
+    <div class="rodape">
+      © 2026 SENAI - Todos os direitos reservados
+    </div>
+
+  </div>
+
+</body>
+</html>
